@@ -1,7 +1,8 @@
 var ReactDOM = require('react-dom');
 var React = require('react');
+var Calculator = require('./components/Calculator.jsx')
  
 ReactDOM.render(
-    <h1>Hello world!</h1>,
+    <Calculator />,
     document.getElementById("app")
 )
