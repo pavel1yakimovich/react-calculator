@@ -4,7 +4,7 @@ class Button extends React.Component {
 
     render() {
         return (
-            <button>button</button>
+            <button style={{height:'90px', width:'90px', fontSize:50}}>{this.props.value}</button>
         );
     }
 }
