@@ -20,6 +20,7 @@ class KeyBoard extends React.Component {
                         onButtonPress={this.props.onButtonPress}
                         key='3'/>
                     <Button value='+'
+                        onButtonPress={this.props.onActionButtonPress}
                         key='+'/>
                 </div>
                 <div>
@@ -33,6 +34,7 @@ class KeyBoard extends React.Component {
                         onButtonPress={this.props.onButtonPress}
                         key='6'/>
                     <Button value='-'
+                        onButtonPress={this.props.onActionButtonPress}
                         key='-'/>
                 </div>
                 <div>
@@ -46,6 +48,7 @@ class KeyBoard extends React.Component {
                         onButtonPress={this.props.onButtonPress}
                         key='9'/>
                     <Button value='*'
+                        onButtonPress={this.props.onActionButtonPress}
                         key='*'/>
                 </div>
                 <div>
@@ -55,10 +58,12 @@ class KeyBoard extends React.Component {
                     <Button value='0'
                         onButtonPress={this.props.onButtonPress}
                         key='0'/>
-                    <Button value='c'
-                        key='c'/>
                     <Button value='='
+                        onButtonPress={this.props.onActionButtonPress}
                         key='='/>
+                    <Button value='/'
+                        onButtonPress={this.props.onActionButtonPress}
+                        key='/'/>
                 </div>
             </div>
         );

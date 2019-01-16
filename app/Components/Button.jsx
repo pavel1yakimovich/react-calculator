@@ -7,7 +7,6 @@ class Button extends React.Component {
     }
 
     handleButtonPress(e) {
-        console.log("Button " + this.props.value + " has been pressed");
         this.props.onButtonPress(this.props.value);
     }
 
