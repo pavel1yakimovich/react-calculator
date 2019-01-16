@@ -2,64 +2,62 @@ var React = require('react');
 var Button = require('./Button.jsx');
 
 class KeyBoard extends React.Component {
+    constructor(props) {
+        super(props);
+    }
 
     render() {
         return (
             <div>
                 <div>
                     <Button value='1'
-                        type='value'
+                        onButtonPress={this.props.onButtonPress}
                         key='1'/>
                     <Button value='2'
-                        type='value'
+                        onButtonPress={this.props.onButtonPress}
                         key='2'/>
                     <Button value='3'
-                        type='value'
+                        onButtonPress={this.props.onButtonPress}
                         key='3'/>
                     <Button value='+'
-                        type='action'
                         key='+'/>
                 </div>
                 <div>
                     <Button value='4'
-                        type='value'
+                        onButtonPress={this.props.onButtonPress}
                         key='4'/>
                     <Button value='5'
-                        type='value'
+                        onButtonPress={this.props.onButtonPress}
                         key='5'/>
                     <Button value='6'
-                        type='value'
+                        onButtonPress={this.props.onButtonPress}
                         key='6'/>
                     <Button value='-'
-                        type='action'
                         key='-'/>
                 </div>
                 <div>
                     <Button value='7'
-                        type='value'
+                        onButtonPress={this.props.onButtonPress}
                         key='7'/>
                     <Button value='8'
-                        type='value'
+                        onButtonPress={this.props.onButtonPress}
                         key='8'/>
                     <Button value='9'
-                        type='value'
+                        onButtonPress={this.props.onButtonPress}
                         key='9'/>
                     <Button value='*'
-                        type='action'
                         key='*'/>
                 </div>
                 <div>
                     <Button value='.'
-                        type='value'
+                        onButtonPress={this.props.onButtonPress}
                         key='.'/>
                     <Button value='0'
-                        type='value'
+                        onButtonPress={this.props.onButtonPress}
                         key='0'/>
                     <Button value='c'
-                        type='value'
                         key='c'/>
                     <Button value='='
-                        type='action'
                         key='='/>
                 </div>
             </div>
