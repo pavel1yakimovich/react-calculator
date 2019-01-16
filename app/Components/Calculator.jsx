@@ -20,8 +20,6 @@ class Calculator extends React.Component {
     pressNumber(number) {
         this.setState((state) => {
             if (state.clearResult) {
-                console.log("new number to remember: " + state.result);
-                console.log("new result: " + number);
                 return {
                     numberToRemember: state.result,
                     result: number,
@@ -31,7 +29,6 @@ class Calculator extends React.Component {
             if (state.result == '0') {
                 return {result: number};
             } else {
-                console.log("new state " + this.state.result + number);
                 return {result: state.result + number};
             }
         });
@@ -44,25 +41,15 @@ class Calculator extends React.Component {
                 var newResult = state.result;
                 switch(state.action) {
                     case '+':
-                        console.log('previous is +');
-                        console.log("new is " + action);
                         newResult = Number(state.numberToRemember) + Number(newResult);
                         break;
                     case '-':
-                        console.log('previous is -');
-                        console.log("new is" + action);
-                        console.log(state);
                         newResult = state.numberToRemember - newResult;
-                        console.log("new result: " + newResult)
                         break;
                     case '*':
-                        console.log('previous is *');
-                        console.log("new is " + action);
                         newResult *= state.numberToRemember;
                         break;
                     case '/':
-                        console.log('previous is /');
-                        console.log("new is " + action);
                         newResult = state.numberToRemember/newResult;
                         break;
                 }
