@@ -11,8 +11,16 @@ class Button extends React.Component {
     }
 
     render() {
+        var width = 90 * this.props.size;
+
+        const buttonStyle = {
+            height: '90px',
+            width: width + 'px',
+            fontSize: 50
+        };
+
         return (
-            <button style={{height:'90px', width:'90px', fontSize:50}} onClick={this.handleButtonPress}>{this.props.value}</button>
+            <button style={buttonStyle} onClick={this.handleButtonPress}>{this.props.value}</button>
         );
     }
 }

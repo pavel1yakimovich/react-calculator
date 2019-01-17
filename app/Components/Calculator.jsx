@@ -37,6 +37,23 @@ class Calculator extends React.Component {
 
     pressAction(action) {
         this.setState((state) => {
+            if (action == "C") {
+                return {
+                    result: 0,
+                    numberToRemember: 0,
+                    action: '',
+                    clearResult: false
+                };
+            }
+            if(action == "<=") {
+                var length = state.result.toString().length;
+                var newResult = length > 1 ? state.result.substring(0, length-1) : 0;
+
+                return {
+                    result: newResult,
+                };
+            }
+
             if (state.action) {
                 var newResult = state.result;
                 switch(state.action) {
